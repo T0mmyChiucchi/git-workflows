@@ -10,13 +10,12 @@ class RegistroVoti:
     def media(self) -> float:
         if not self.voti:
             return 0
-        return sum(self.voti)/len(self.voti)
+        return sum(self.voti) / len(self.voti)
 
     def esito(self) -> str:
         if self.media() >= 6:
             return "sufficiente"
-        return "da recupeare"
-        #return "sufficiente" if self.media() >= 6 else "da recuperare"
+        return "da recuperare"
 
 
 if __name__ == "__main__":
